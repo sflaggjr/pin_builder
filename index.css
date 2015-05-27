@@ -1,0 +1,11 @@
+.divTable{
+  display: table;
+}
+.divRow{
+  display: table-row;
+  text-align: center;
+}
+.divCell{
+  display: table-cell;
+  text-align: center;
+}
