@@ -15,7 +15,11 @@
     </div>
     <div class='divRow'>
       <div class='divCell'>New / Update / Resolved</div>
-      <div class='divCell'><input type='radio' name='pinStatus' class='dataPoint' id='newPin'>New<input type='radio' name='pinStatus' class='dataPoint' id='updatedPin'>Updated<input type='radio' name='pinStatus' class='dataPoint' id='resolvedPin'>Resolved</div>
+      <div class='divCell'><input type='radio' name='pinStatus' id='newPin'>New<input type='radio' name='pinStatus' id='updatedPin'>Updated<input type='radio' name='pinStatus' id='resolvedPin'>Resolved</div>
+    </div>
+    <div class='divRow'>
+      <div class='divCell'>Subject</div>
+      <div class='divCell'><input type='text' id='subject' class='dataPoint'></div>
     </div>
     <div class='divRow'>
       <div class='divCell'>Issue Status</div>
@@ -27,32 +31,57 @@
     </div>
     <div class='divRow'>
       <div class='divCell'>Start Date/Time</div>
-      <div class='divCell'><input type='date' class='dataPoint' id='startDate'>/<input type=time class='dataPoint' id='startTime'></div>
+      <div class='divCell'><input type='date' class='dataPoint' id='startDate'><input type=time class='dataPoint' id='startTime'></div>
     </div>
     <div class='divRow'>
       <div class='divCell'>Reported Date/Time</div>
-      <div class='divCell'><input type='date' class='dataPoint' id='startDate'>/<input type=time class='dataPoint' id='startTime'></div>
+      <div class='divCell'><input type='date' class='dataPoint' id='reportDate'><input type=time class='dataPoint' id='reportTime'></div>
     </div>
     <div class='divRow'>
       <div class='divCell'>End Date/Time</div>
-      <div class='divCell'><input type='date' class='dataPoint' id='startDate'>/<input type=time class='dataPoint' id='startTime'></div>
+      <div class='divCell'><input type='date' class='dataPoint' id='endDate'><input type=time class='dataPoint' id='endTime'></div>
+    </div>
+    <div class='divRow'>
+      <div class='divCell'>Reporters</div>
+      <div class='divCell'><textarea id='reporters' class='dataPoint'></textarea></div>
+    </div>
+    <div class='divRow'>
+      <div class='divCell'>Issue Scope</div>
+      <div class='divCell'><textarea id='scope' class='dataPoint'></textarea></div>
     </div>
     <button id='submit'>Submit</button>
     </div>
+    <div id='divOutput'>
     <div class='divTable'>
-      <div class='divRow'>
-        <div class='divCell'><h3>Output</h3></div>
+        <div class='divRow'>
+          <div class='divCell'><h3>Output</h3></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output'id='outputSubject'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputStatus'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputImpact'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputStartTime'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputReportTime'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputEndTime'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputReporters'></p></div>
+        </div>
+        <div class='divRow'>
+          <div class='divCell'><p class='output' id='outputScope'></p></div>
+        </div>
       </div>
-      <div class='divRow'>
-          <div class='divCell'></div>
-      </div>
-
-
-
-
-
-
-    </div>
+  </div>
   </div>
 </form>
 </body>
