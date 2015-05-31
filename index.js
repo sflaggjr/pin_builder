@@ -20,12 +20,12 @@ function getData()
 
 function outputData(data)
   {
-    var inputArray = [
-      {'status': 'newStatus'},{'height': 'newHeight'}
-    ];
+    var inputArray = [data];
+    var outputFields = {};
     $.each(inputArray,function(index, field){
-      $.each(field, function(origin, destination){
-        console.log('Original Field:' + origin, "New Field:" + destination);
+      $('.output').each(function(origin, destination){
+        console.log('Original Field:' + origin, "New Field:" + destination.id);
+
       })
     });
   };
