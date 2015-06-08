@@ -1,9 +1,7 @@
 $(document).ready(function(){
-  $('#')
   $('#submit').click(function(evt){
     evt.preventDefault();
     var data = getData();
-    console.log(data);
     outputData(data);
   });
 });
@@ -20,12 +18,18 @@ function getData()
 
 function outputData(data)
   {
-    var inputArray = [data];
-    var outputFields = {};
-    $.each(inputArray,function(index, field){
-      $('.output').each(function(origin, destination){
-        console.log('Original Field:' + origin, "New Field:" + destination.id);
-
-      })
-    });
+    var arr = [
+       {'status': 'outputStatus'},
+       {'product': 'outputProduct'},
+       {'subject': 'outputSubject'},
+       {'impact': 'outputImpact'},
+       {'reporters': 'outputReporters'},
+       {'scope': 'outputScope'}
+     ];
+     $.each(arr, function(index, field) {
+       $.each(field, function(origin, destination) {
+         $('#' + destination).html(data[origin]);
+         console.log("Original Field: " + origin,"New Field: " + destination);
+       })
+     });
   };
