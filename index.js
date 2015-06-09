@@ -19,10 +19,16 @@ function getData()
 function outputData(data)
   {
     var arr = [
-       {'status': 'outputStatus'},
-       {'product': 'outputProduct'},
+       {'outageID': 'outputOutageID'},
        {'subject': 'outputSubject'},
+       {'product': 'outputProduct'},
+       {'status': 'outputStatus'},
        {'impact': 'outputImpact'},
+       {'startDate': 'outputStartDate'},
+       {'startTime': 'outputStartTime'},
+       {'reportDate': 'outputReportDate'},
+       {'reportTime': 'outputReportTime'},
+       {'endDate': 'outputEndDate'},
        {'reporters': 'outputReporters'},
        {'scope': 'outputScope'}
      ];
