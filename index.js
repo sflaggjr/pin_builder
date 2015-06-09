@@ -1,9 +1,13 @@
 $(document).ready(function(){
+  $('.staticText').hide();
   $('#submit').click(function(evt){
     evt.preventDefault();
     var data = getData();
     outputData(data);
   });
+  $('radio').click(function(evt)){
+    evt.preventDefault();
+  })
 });
 
 
@@ -35,7 +39,17 @@ function outputData(data)
      $.each(arr, function(index, field) {
        $.each(field, function(origin, destination) {
          $('#' + destination).html(data[origin]);
-         console.log("Original Field: " + origin,"New Field: " + destination);
        })
      });
+     $('.staticText').show();
   };
+function pinType()
+{
+  var newPin = $('#newPin').val();
+  console.log(newPin);
+  if $(newPin) == true
+    {
+      $('#endDate').hide();
+      $('#endTime').hide();
+    }
+}
