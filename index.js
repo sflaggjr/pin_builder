@@ -2,7 +2,7 @@ $(document).ready(function(){
   //Speed value for Transitions
   speed = 500;
   //Hiding text that should be hidden by default
-  $('.staticText').hide();
+  $('#divOutput').hide();
   $('#endDate').hide();
   $('#endTime').hide();
   $('#reset').hide();
@@ -60,6 +60,6 @@ function outputData(data, speed)
          $('#' + destination).html(data[origin]);
        })
      });
-     $('.staticText').show(speed);
+     $('#divOutput').show(speed);
      $('#reset').show(speed);
   };
