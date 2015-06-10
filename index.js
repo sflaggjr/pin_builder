@@ -1,13 +1,32 @@
 $(document).ready(function(){
+  //Speed value for Transitions
+  speed = 500;
+  //Hiding text that should be hidden by default
   $('.staticText').hide();
+  $('#endDate').hide();
+  $('#endTime').hide();
+  $('#reset').hide();
+  //This takes data from the form and stores it in an object, then returns that to the page as text.
   $('#submit').click(function(evt){
     evt.preventDefault();
     var data = getData();
     outputData(data);
+  //Hide the input form so the Output text is the only viewable information
+  $('#input').hide(speed);
   });
-  $('radio').click(function(evt)){
-    evt.preventDefault();
-  })
+  //functionality to hide or show the end date based on the radio buttons. *Need to work this into a toggle.*
+  $('#newPin').click(function(evt){
+    $('#endDate').hide(speed);
+    $('#endTime').hide(speed);
+  });
+  $('#updatedPin').click(function(evt){
+    $('#endDate').hide(speed);
+    $('#endTime').hide(speed);
+  });
+  $('#resolvedPin').click(function(evt){
+    $('#endDate').show(speed);
+    $('#endTime').show(speed);
+  });
 });
 
 
@@ -20,7 +39,7 @@ function getData()
     return data;
   };
 
-function outputData(data)
+function outputData(data, speed)
   {
     var arr = [
        {'outageID': 'outputOutageID'},
@@ -41,15 +60,6 @@ function outputData(data)
          $('#' + destination).html(data[origin]);
        })
      });
-     $('.staticText').show();
+     $('.staticText').show(speed);
+     $('#reset').show(speed);
   };
-function pinType()
-{
-  var newPin = $('#newPin').val();
-  console.log(newPin);
-  if $(newPin) == true
-    {
-      $('#endDate').hide();
-      $('#endTime').hide();
-    }
-}

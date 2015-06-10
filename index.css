@@ -1,12 +1,10 @@
 .divTable {
   display: table;
 }
-
 .divRow {
   display: table-row;
   text-align: center;
 }
-
 .divCell {
   display: table-cell;
   text-align: center;
@@ -15,17 +13,15 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 textarea {
   max_width: 500px;
   max_height: 300px;
 }
-
-.staticText{
+.static{
   font-weight: bold;
 }
 #divOutput{
-  position: fixed;
+  position: absolute;
   top: 0px;
   right: 500px;
 }

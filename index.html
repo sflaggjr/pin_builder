@@ -2,12 +2,11 @@
 <head>
   <title>Production Issue Notification Builder</title>
   <script src='jquery-1.11.3.js'></script>
-  <script src='index.js'></script>
 </head>
 <body>
   <link rel='stylesheet' href='index.css'>
   <form>
-  <div class='divTable'>
+  <div class='divTable' id='input'>
     <h3>Production Issue Notification Builder</h3>
     <div class='divRow'>
       <div class='divCell'>Outage ID</div>
@@ -19,7 +18,7 @@
     </div>
     <div class='divRow'>
       <div class='divCell'>New / Update / Resolved</div>
-      <div class='divCell'><input type='radio' name='pinStatus' id='newPin'>New<input type='radio' name='pinStatus' id='updatedPin'>Updated<input type='radio' name='pinStatus' id='resolvedPin'>Resolved</div>
+      <div class='divCell'><input type='radio' name='pinStatus' id='newPin' checked>New<input type='radio' name='pinStatus' id='updatedPin'>Updated<input type='radio' name='pinStatus' id='resolvedPin'>Resolved</div>
     </div>
     <div class='divRow'>
       <div class='divCell'>Subject</div>
@@ -62,7 +61,7 @@
         </div>
         <div class='divRow'>
           <div class='divCell'><p class='staticText'>Subject: </p></div>
-          <div class='divCell'><p class='output' id='outputOutageID'></p>&nbsp;<p class='output'id='outputSubject'></p></div>
+          <div class='divCell'><p>Outage ID: &nbsp;<p class='output' id='outputOutageID'> - </p>&nbsp;<p class='output'id='outputSubject'></p></div>
         </div>
         <div class='divRow'>
           <div class='divCell'><p class='staticText'>Product Line: </p></div>
@@ -94,10 +93,12 @@
         </div>
         <div class='divRow'>
           <div class='divCell'><p class='staticText'>Scope: </p><p class='output' id='outputScope'></p></div>
-          <div class='divCell'><p class='output' id='outputScope'></p></div>
+          <div class='divCell'><p class='output' id='outputScope'></p></div><br>
+        <button id='reset'>Reset</button>
         </div>
       </div>
   </div>
   </div>
 </form>
+<script src='index.js'></script>
 </body>
