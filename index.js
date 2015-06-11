@@ -10,6 +10,11 @@ $(document).ready(function(){
     evt.preventDefault();
     var data = getData();
     outputData(data);
+  //Clicking Reset will reset the form back to original state and hide the Output text
+  $('#reset').click(function(evt){
+    $('#divOutput').hide(speed);
+  }
+  )
   //Hide the input form so the Output text is the only viewable information
   $('#input').hide(speed);
   });
