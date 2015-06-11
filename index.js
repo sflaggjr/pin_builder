@@ -3,8 +3,8 @@ $(document).ready(function(){
   speed = 500;
   //Hiding text that should be hidden by default
   $('#divOutput').hide();
-  $('#endDate').hide();
-  $('#endTime').hide();
+  $('#divEndDate').hide();
+  $('#reset').hide();
   //This takes data from the form and stores it in an object, then returns that to the page as text.
   $('#submit').click(function(evt){
     evt.preventDefault();
@@ -16,25 +16,17 @@ $(document).ready(function(){
   }
   )
   //Hide the input form so the Output text is the only viewable information
-    $('#divOutput').show(speed);
-    $('#input').hide(speed);
+  $('#input').hide(speed);
   });
-  $('#reset').click(function() {
-    $('#divOutput').hide(speed);
-    $('#input').show(speed);
-  })
   //functionality to hide or show the end date based on the radio buttons. *Need to work this into a toggle.*
   $('#newPin').click(function(evt){
-    $('#endDate').hide(speed);
-    $('#endTime').hide(speed);
+    $('#divEndDate').hide(speed);
   });
   $('#updatedPin').click(function(evt){
-    $('#endDate').hide(speed);
-    $('#endTime').hide(speed);
+    $('#divEndDate').hide(speed);
   });
   $('#resolvedPin').click(function(evt){
-    $('#endDate').show(speed);
-    $('#endTime').show(speed);
+    $('#divEndDate').show(speed);
   });
 });
 
@@ -69,4 +61,6 @@ function outputData(data, speed)
          $('#' + destination).html(data[origin]);
        })
      });
+     $('#divOutput').show(speed);
+     $('#reset').show(speed);
   };
