@@ -1,104 +1,106 @@
 <!DOCTYPE HTML>
-<head>
-  <title>Production Issue Notification Builder</title>
-  <script src='jquery-1.11.3.js'></script>
-</head>
-<body>
-  <link rel='stylesheet' href='index.css'>
-  <form>
-  <div class='divTable' id='input'>
-    <h3>Production Issue Notification Builder</h3>
-    <div class='divRow'>
-      <div class='divCell'>Outage ID</div>
-      <div class='divCell'><input type='text' id='outageID' class='dataPoint'></div>
-    </div>
-    <div class='divRow'>
-        <div class='divCell'>Product Line</div>
-        <div class='divCell'><input type='text' id='product' class='dataPoint'></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>New / Update / Resolved</div>
-      <div class='divCell'><input type='radio' name='pinStatus' id='newPin' checked>New<input type='radio' name='pinStatus' id='updatedPin'>Updated<input type='radio' name='pinStatus' id='resolvedPin'>Resolved</div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Subject</div>
-      <div class='divCell'><input type='text' id='subject' class='dataPoint'></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Issue Status</div>
-      <div class='divCell'><textarea id='status' class='dataPoint'></textarea></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Client Impact</div>
-      <div class='divCell'><textarea id='impact' class='dataPoint'></textarea></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Start Date/Time</div>
-      <div class='divCell'><input type='date' class='dataPoint' id='startDate'><input type=time class='dataPoint' id='startTime'></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Reported Date/Time</div>
-      <div class='divCell'><input type='date' class='dataPoint' id='reportDate'><input type=time class='dataPoint' id='reportTime'></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>End Date/Time</div>
-      <div class='divCell'><input type='date' class='dataPoint' id='endDate'><input type=time class='dataPoint' id='endTime'></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Reporters</div>
-      <div class='divCell'><textarea id='reporters' class='dataPoint'></textarea></div>
-    </div>
-    <div class='divRow'>
-      <div class='divCell'>Issue Scope</div>
-      <div class='divCell'><textarea id='scope' class='dataPoint'></textarea></div>
-    </div>
-    <button id='submit'>Submit</button>
-    </div>
-    <div id='divOutput'>
-    <div class='divTable'>
-        <div class='divRow'>
-          <div class='divCell'><h3>Output</h3></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Subject: </p></div>
-          <div class='divCell'><p>Outage ID: &nbsp;<p class='output' id='outputOutageID'> - </p>&nbsp;<p class='output'id='outputSubject'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Product Line: </p></div>
-          <div class='divCell'><p class='output' id='outputProduct'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Status: </p></div>
-          <div class='divCell'><p class='output' id='outputStatus'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Impact: </p></div>
-          <div class='divCell'><p class='output' id='outputImpact'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Start Date: </p></div>
-          <div class='divCell'><p class='output' id='outputStartDate'></p>&nbsp;<p class='output' id='outputStartTime'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Report Date: </p></div>
-          <div class='divCell'><p class='output' id='outputReportDate'></p>&nbsp;<p class='output' id='outputReportTime'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >End Date: </p></div>
-          <div class='divCell'><p class='output' id='outputEndTime'></p>&nbsp;<p class='output' id='outputEndTime'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Reporters: </p></div>
-          <div class='divCell'><p class='output' id='outputReporters'></p></div>
-        </div>
-        <div class='divRow'>
-          <div class='divCell'><p >Scope: </p><p class='output' id='outputScope'></p></div>
-          <div class='divCell'><p class='output' id='outputScope'></p></div><br>
-        <button id='reset'>Reset</button>
-        </div>
+<html>
+  <head>
+    <title>Production Issue Notification Builder</title>
+    <link rel='stylesheet' href='index.css'>
+  </head>
+  <body>
+    <form>
+    <div class='divTable' id='input'>
+      <h3>Production Issue Notification Builder</h3>
+      <div class='divRow'>
+        <div class='divCell'>Outage ID</div>
+        <div class='divCell'><input type='text' id='outageID' class='dataPoint'></div>
       </div>
-  </div>
-  </div>
-</form>
-<script src='index.js'></script>
-</body>
+      <div class='divRow'>
+          <div class='divCell'>Product Line</div>
+          <div class='divCell'><input type='text' id='product' class='dataPoint'></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>New / Update / Resolved</div>
+        <div class='divCell'><input type='radio' name='pinStatus' id='newPin' checked>New<input type='radio' name='pinStatus' id='updatedPin'>Updated<input type='radio' name='pinStatus' id='resolvedPin'>Resolved</div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Subject</div>
+        <div class='divCell'><input type='text' id='subject' class='dataPoint'></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Issue Status</div>
+        <div class='divCell'><textarea id='status' class='dataPoint'></textarea></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Client Impact</div>
+        <div class='divCell'><textarea id='impact' class='dataPoint'></textarea></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Start Date/Time</div>
+        <div class='divCell'><input type='date' class='dataPoint' id='startDate'><input type=time class='dataPoint' id='startTime'></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Reported Date/Time</div>
+        <div class='divCell'><input type='date' class='dataPoint' id='reportDate'><input type=time class='dataPoint' id='reportTime'></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>End Date/Time</div>
+        <div class='divCell'><input type='date' class='dataPoint' id='endDate'><input type=time class='dataPoint' id='endTime'></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Reporters</div>
+        <div class='divCell'><textarea id='reporters' class='dataPoint'></textarea></div>
+      </div>
+      <div class='divRow'>
+        <div class='divCell'>Issue Scope</div>
+        <div class='divCell'><textarea id='scope' class='dataPoint'></textarea></div>
+      </div>
+      <button id='submit'>Submit</button>
+      </div>
+      <div id='divOutput'>
+      <div class='divTable'>
+          <div class='divRow'>
+            <div class='divCell'><h3>Output</h3></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Subject: </p></div>
+            <div class='divCell'><p>Outage ID: &nbsp;<p class='output' id='outputOutageID'> - </p>&nbsp;<p class='output'id='outputSubject'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Product Line: </p></div>
+            <div class='divCell'><p class='output' id='outputProduct'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Status: </p></div>
+            <div class='divCell'><p class='output' id='outputStatus'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Impact: </p></div>
+            <div class='divCell'><p class='output' id='outputImpact'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Start Date: </p></div>
+            <div class='divCell'><p class='output' id='outputStartDate'></p>&nbsp;<p class='output' id='outputStartTime'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Report Date: </p></div>
+            <div class='divCell'><p class='output' id='outputReportDate'></p>&nbsp;<p class='output' id='outputReportTime'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >End Date: </p></div>
+            <div class='divCell'><p class='output' id='outputEndTime'></p>&nbsp;<p class='output' id='outputEndTime'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Reporters: </p></div>
+            <div class='divCell'><p class='output' id='outputReporters'></p></div>
+          </div>
+          <div class='divRow'>
+            <div class='divCell'><p >Scope: </p><p class='output' id='outputScope'></p></div>
+            <div class='divCell'><p class='output' id='outputScope'></p></div><br>
+          <button id='reset'>Reset</button>
+          </div>
+        </div>
+    </div>
+    </div>
+  </form>
+  <script src='jquery-1.11.3.js'></script>
+  <script src='index.js'></script>
+  </body>
+</html>

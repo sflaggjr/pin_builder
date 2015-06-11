@@ -1,21 +1,32 @@
 .divTable {
   display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
 }
 .divRow {
   display: table-row;
   text-align: center;
 }
+
 .divCell {
   display: table-cell;
-  text-align: center;
-  margin-left: 15px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  vertical-align: top;
+  padding-bottom: 5px;
 }
+
+.divCell:nth-child(1) {
+  text-align: right;
+}
+
+.divCell:nth-child(2) {
+  text-align: left;
+}
+
 textarea {
-  max_width: 500px;
-  max_height: 300px;
+  width: 400px;
+  height: 50px;
+  max-width: 500px;
+  max-height: 300px;
 }
 .static{
   font-weight: bold;
