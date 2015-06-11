@@ -23,7 +23,7 @@ textarea {
 #divOutput{
   position: absolute;
   top: 0px;
-  right: 500px;
+  left: 0px;
 }
 .output{
   display:inline;
