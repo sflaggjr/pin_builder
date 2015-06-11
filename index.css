@@ -1,3 +1,8 @@
+body {
+  font-family: calibri, sans-serif;
+  font-size: 1em;
+}
+
 .divTable {
   display: table;
   border-collapse: separate;
@@ -28,14 +33,7 @@ textarea {
   max-width: 500px;
   max-height: 300px;
 }
-.static{
+
+.bold {
   font-weight: bold;
-}
-#divOutput{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-.output{
-  display:inline;
 }
