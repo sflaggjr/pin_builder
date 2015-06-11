@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Production Issue Notification Builder</title>
+    <link rel='stylesheet' href='jqueryui/jquery-ui.css'>
     <link rel='stylesheet' href='index.css'>
   </head>
   <body>
@@ -18,7 +19,11 @@
         </div>
         <div class='divRow'>
           <div class='divCell'></div>
-          <div class='divCell'><input type='radio' name='pinStatus' id='newPin' checked>New<input type='radio' name='pinStatus' id='updatedPin'>Updated<input type='radio' name='pinStatus' id='resolvedPin'>Resolved</div>
+          <div class='divCell radioSet'>
+            <input type='radio' name='pinStatus' id='newPin' checked><label for='newPin'>New</label>
+            <input type='radio' name='pinStatus' id='updatedPin'><label for='updatedPin'>Updated</label>
+            <input type='radio' name='pinStatus' id='resolvedPin'><label for='resolvedPin'>Resolved</label>
+            </div>
         </div>
         <div class='divRow'>
           <div class='divCell'>Subject</div>
@@ -71,6 +76,8 @@
     </div>
 
     <script src='jquery-1.11.3.js'></script>
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jqueryui/jquery-ui.min.js"></script>
     <script src='index.js'></script>
   </body>
 </html>

@@ -1,6 +1,8 @@
 $(document).ready(function(){
   //Speed value for Transitions
   speed = 500;
+  $('button').button();
+  $('.radioSet').buttonset();
   //Hiding text that should be hidden by default
   $('#divOutput').hide();
   $('#endDate').hide();
